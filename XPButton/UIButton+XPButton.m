@@ -24,7 +24,7 @@ static const void *parameterKey = &parameterKey;
     objc_setAssociatedObject(self, parameterKey, parameterObjet, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
--(id)ParameterObjet{
+-(id)parameterObjet{
     return objc_getAssociatedObject(self, parameterKey);
 }
 
