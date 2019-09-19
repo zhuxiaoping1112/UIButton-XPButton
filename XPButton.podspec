@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.author             = { "zhuzhu" => "849194273@qq.com" }
   s.frameworks   = 'Foundation','UIKit'
   s.platform     = :ios, "7.0"
-  s.source       = { :git => "https://github.com/zhuxiaoping1112/UIButton-	XPButton.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/zhuxiaoping1112/UIButton-XPButton.git", :tag => "#{s.version}" }
   s.source_files  = "XPButton/*.{h,m}"
   s.requires_arc = true
 
