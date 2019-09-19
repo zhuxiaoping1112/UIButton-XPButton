@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "XPButton"
-  s.version      = "1.0.2"
+  s.version      = "1.0.3"
   s.summary      = "frist Commit"
   s.description  = <<-DESC
 			XPButton
