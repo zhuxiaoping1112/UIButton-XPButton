@@ -7,6 +7,8 @@
 //
 
 #import "UIButton+XPButton.h"
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import <objc/runtime.h>
 
 static const NSString * topNameKey;
@@ -15,7 +17,7 @@ static const NSString * bottomNameKey;
 static const NSString * leftNameKey;
 static const void *parameterKey = &parameterKey;
 
-@implementation UIButton (SJButton)
+@implementation UIButton (XPButton)
 @dynamic parameterObjet;
 
 -(void)setParameterObjet:(id)parameterObjet{
@@ -56,7 +58,7 @@ static const void *parameterKey = &parameterKey;
     // lack of space and isn't anymore now), so we get the frame size again
     titleSize = self.titleLabel.frame.size;
     NSString *text = self.titleLabel.text;
-    CGRect rect = [text boundingRectWithSize:CGSizeMake(self.size.width, self.size.height) options:NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:self.titleLabel.font} context:nil];
+    CGRect rect = [text boundingRectWithSize:CGSizeMake(self.frame.size.width, self.frame.size.height) options:NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:self.titleLabel.font} context:nil];
     // raise the image and push it right to center it
     self.imageEdgeInsets = UIEdgeInsetsMake(- (titleSize.height + spacing/2), 0.0, 0.0, - rect.size.width);
 }
@@ -80,7 +82,7 @@ static const void *parameterKey = &parameterKey;
     // the text width might have changed (in case it was shortened before due to
     // lack of space and isn't anymore now), so we get the frame size again
     NSString *text = self.titleLabel.text;
-    CGRect rect = [text boundingRectWithSize:CGSizeMake(self.size.width, self.size.height) options:NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:self.titleLabel.font} context:nil];
+    CGRect rect = [text boundingRectWithSize:CGSizeMake(self.frame.size.width, self.frame.size.height) options:NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:self.titleLabel.font} context:nil];
     titleSize = rect.size;
     
     // raise the image and push it right to center it
@@ -139,7 +141,7 @@ static const void *parameterKey = &parameterKey;
     // the text width might have changed (in case it was shortened before due to
     // lack of space and isn't anymore now), so we get the frame size again
     NSString *text = self.titleLabel.text;
-    CGRect rect = [text boundingRectWithSize:CGSizeMake(self.size.width, self.size.height) options:NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:self.titleLabel.font} context:nil];
+    CGRect rect = [text boundingRectWithSize:CGSizeMake(self.frame.size.width, self.frame.size.height) options:NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:self.titleLabel.font} context:nil];
     titleSize = rect.size;
     
     // raise the image and push it right to center it
