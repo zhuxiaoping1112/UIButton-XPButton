@@ -1,3 +1,5 @@
+
+#使用 pod 'UIButton-XPButton' 来添加pod属性
 # UIButton-XPButton
 #给button 增加一些实用的方法和属性
 #增加一个可以添加任意参数的属性parameterObjet
